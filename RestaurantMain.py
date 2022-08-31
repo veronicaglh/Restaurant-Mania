@@ -130,6 +130,55 @@ page2_calculate_button.place(x=550, y=400)
 # ========== End of Page 2 =============
 
 
+# ============= Page 3 =================
+
+# Declaring the widgets of Page 3
+page3.config(background='#925D33')
+img = Label(page3, image=render)
+img.place(x=0, y=0)
+
+
+page3_label_1 = Label(page3, text='Edit Menu', bg='#925D33',fg='white', font=('Calibri', 30, 'bold'))
+page3_label_2 = Label(page3, text='If you would like to add an item to menu', bg='#925D33',fg='white',font=('Calibri', 13, 'normal'))
+
+# To add an item to the menu
+add_name = Label(page3, text='Name:',bg='#925D33',fg='white', font=('Calibri', 13, 'italic'))
+add_item_name_entry = Entry(page3, highlightthickness=2)
+add_item_name_entry. config(width=22, highlightcolor='#DF7861')
+
+add_price = Label(page3, text='Price:',bg='#925D33',fg='white', font=('Calibri', 13, 'italic'))
+add_item_price_entry = Entry(page3, highlightthickness=2)
+add_item_price_entry. config(width=22, highlightcolor='#DF7861')
+
+# To change an item  in the menu
+change_label = Label(page3, text='If you would like to change an items price', bg='#925D33',fg='white',font=('Calibri', 13, 'normal'))
+change_name = Label(page3, text='Name:',bg='#925D33',fg='white', font=('Calibri', 13, 'italic'))
+change_name_entry = Entry(page3, highlightthickness=2)
+change_name_entry. config(width=22, highlightcolor='#DF7861')
+
+change_price = Label(page3, text='Price:',bg='#925D33',fg='white', font=('Calibri', 13, 'italic'))
+change_price_entry = Entry(page3, highlightthickness=2)
+change_price_entry. config(width=22, highlightcolor='#DF7861')
+
+# Buttons
+continue_button = Button(page3, text='Continue', fg='#925D33',font=('Calibri', 13, 'bold'), command=lambda: show_frame(page4))
+
+
+# Placing the widgets on to the page3 frame
+page3_label_1.place(x=450, y=120)
+page3_label_2.place(x=450, y=190)
+add_name.place(x=490, y=210)
+add_item_name_entry.place(x=540, y=215)
+add_price.place(x=490, y=235)
+add_item_price_entry.place(x=540, y=240)
+change_label.place(x=450, y=300)
+change_name.place(x=490, y=320)
+change_name_entry.place(x=540, y=325)
+change_price.place(x=490, y=340)
+change_price_entry.place(x=540, y=350)
+continue_button.place(x=645, y=390)
+# ========== End of Page 3 =============
+
 
 
 
