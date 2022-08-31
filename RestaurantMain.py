@@ -137,7 +137,6 @@ page3.config(background='#925D33')
 img = Label(page3, image=render)
 img.place(x=0, y=0)
 
-
 page3_label_1 = Label(page3, text='Edit Menu', bg='#925D33',fg='white', font=('Calibri', 30, 'bold'))
 page3_label_2 = Label(page3, text='If you would like to add an item to menu', bg='#925D33',fg='white',font=('Calibri', 13, 'normal'))
 
@@ -163,7 +162,6 @@ change_price_entry. config(width=22, highlightcolor='#DF7861')
 # Buttons
 continue_button = Button(page3, text='Continue', fg='#925D33',font=('Calibri', 13, 'bold'), command=lambda: show_frame(page4))
 
-
 # Placing the widgets on to the page3 frame
 page3_label_1.place(x=450, y=120)
 page3_label_2.place(x=450, y=190)
@@ -179,6 +177,49 @@ change_price_entry.place(x=540, y=350)
 continue_button.place(x=645, y=390)
 # ========== End of Page 3 =============
 
+
+# ============= Page 4 =================
+
+# Declaring the widgets of Page 4
+page4.config(background='#925D33')
+img = Label(page4, image=render)
+img.place(x=0, y=0)
+
+page4_label_1 = Label(page4, text='Calculate', bg='#925D33',fg='white', font=('Calibri', 30, 'bold'))
+
+# To get what user has eaten that day
+page4_label_2 = Label(page4, text='What did you eat today?Please enter separate', bg='#925D33',fg='white', font=('Calibri', 12, 'normal'))
+page4_label_3 = Label(page4, text='foods with space', bg='#925D33',fg='white', font=('Calibri', 12, 'normal'))
+page4_entry_1 = Entry(page4, highlightthickness=2)
+page4_entry_1. config(width=40, highlightcolor='#DF7861')
+
+
+# To get who has eaten that day
+page4_label_4 = Label(page4, text='Who ate today? Please enter with space', bg='#925D33',fg='white', font=('Calibri', 12, 'normal'))
+page4_label_5 = Label(page4, text='Only enter those who are going to pay', bg='#925D33',fg='white', font=('Calibri', 12, 'normal'))
+page4_entry_2 = Entry(page4, highlightthickness=2)
+page4_entry_2. config(width=40, highlightcolor='#DF7861')
+
+
+# To get how much each person is ready to pay
+page4_label_6 = Label(page4, text='How much is each person ready to pay?', bg='#925D33',fg='white', font=('Calibri', 12, 'normal'))
+page4_label_7 = Label(page4, text='Enter respective to previous entry', bg='#925D33',fg='white', font=('Calibri', 12, 'normal'))
+page4_entry_3 = Entry(page4, highlightthickness=2)
+page4_entry_3. config(width=40, highlightcolor='#C54F1F')
+
+
+# Placing the widgets on to the page4 frame
+page4_label_1.place(x=500, y=120)
+page4_label_2.place(x=450, y=200)
+page4_label_3.place(x=450, y=220)
+page4_entry_1.place(x=450, y=245)
+page4_label_4.place(x=450, y=300)
+page4_label_5.place(x=450, y=320)
+page4_entry_2.place(x=450, y=345)
+page4_label_6.place(x=450, y=397)
+page4_label_7.place(x=450, y=417)
+page4_entry_3.place(x=450, y=442)
+# ========== End of Page 4 =============
 
 
 
