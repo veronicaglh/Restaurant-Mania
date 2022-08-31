@@ -409,4 +409,17 @@ def calculate():
     # and the results from the calculate function can be displayed on the 5th page(page5) of the UI
     show_frame(page5)
 
+
+# Adding the tkinter buttons
+# The tkinter buttons have been implemented here because once they have been clicked
+# they will call functions like add_item_to_menu(), change_price_on_menu() and calculate()
+# Therefore they can only be implemented once these functions have been implemented
+add_menu_button = Button(page3, text='Add Item', fg='#925D33',font=('Calibri', 13, 'bold'), command=add_item_to_menu)
+change_button = Button(page3, text='Change Price', fg='#925D33',font=('Calibri', 13, 'bold'), command=change_price_on_menu)
+add_menu_button.place(x=450, y=390)
+change_button.place(x=535, y=390)
+
+calculate_button = Button(page4, text='Calculate', fg='#925D33',font=('Calibri', 13, 'bold'), command=calculate)
+calculate_button.place(x=620, y=475)
 mainWindow.mainloop()
+
