@@ -277,5 +277,16 @@ def add_item_to_menu():
             messagebox.showinfo("Successful", "You have successfully added a new item to the menu. Press continue to calculate")
 
 
+# Function that will be called when user changes an items price on menu
+def change_price_on_menu():
+    changeWhichFood = change_name_entry.get()
+    priceChange = int(change_price_entry.get())
+    if changeWhichFood in priceOfFood:
+        for i in priceOfFood.keys():
+            if changeWhichFood == i:
+                priceOfFood[i] = priceChange
+        messagebox.showinfo("Successful", "You have successfully changed the price of an item on the menu. Press continue to calculate")
+    else:
+        messagebox.showwarning("Warning Message","Can not find the item on the menu. If item does not exist you can re-run and edit the menu.")
 
 mainWindow.mainloop()
