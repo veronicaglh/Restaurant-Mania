@@ -308,4 +308,28 @@ def calculate():
 
     number_of_people = len(people_that_ate)
 
+    # For error handling
+    def popup():
+        for i in range(len(food_eaten)):
+            if food_eaten[i] in priceOfFood:
+                continue
+            else:
+                messagebox.showwarning("Warning Message",
+                                       "You have entered an item that is not in the menu. Please re run and edit the menu before continuing.")
+                break
+
+        if number_of_people < len(list_payments):
+            error_message_one = f"You have inputed that {number_of_people} people ate but you gave {len(list_payments)} money input. Please fix this. If a person didn't pay don't enter their name."
+            messagebox.showerror("Error Message", error_message_one)
+
+        elif number_of_people > len(list_payments):
+            error_message_two = f"You said that {number_of_people} people ate but you gave {len(list_payments)} money input. Please fix this. If a person didn't pay don't enter their name."
+            messagebox.showerror("Error Message", error_message_two)
+
+        elif number_of_people == 0:
+            error_message_three = "You have inputed that no body has ate. Please fix this."
+            messagebox.showerror("Error Message", error_message_three)
+
+    popup()
+
 mainWindow.mainloop()
