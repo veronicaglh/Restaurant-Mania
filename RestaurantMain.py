@@ -289,4 +289,23 @@ def change_price_on_menu():
     else:
         messagebox.showwarning("Warning Message","Can not find the item on the menu. If item does not exist you can re-run and edit the menu.")
 
+
+# Function to calculate the total price and best method/algorithm of payment
+def calculate():
+    # will get what meal has been eaten from entry box declared in page4.
+    # after getting what meal has been eaten from entry box named page4_entry_1
+    # will split each meal and add it to list called food_eaten
+    whichFood = page4_entry_1.get()
+    food_eaten = whichFood.split()
+
+    peopleWhoAte = page4_entry_2.get()
+    people_that_ate = peopleWhoAte.split()
+
+    payed = page4_entry_3.get()
+    payed_list = payed.split()
+    map_object = map(int, payed_list)
+    list_payments = list(map_object)
+
+    number_of_people = len(people_that_ate)
+
 mainWindow.mainloop()
