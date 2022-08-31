@@ -332,4 +332,16 @@ def calculate():
 
     popup()
 
+    totalPrice = 0
+    ## To find the total price of what they ate that day:
+    for i in food_eaten:
+        for keys in priceOfFood:
+            if i == keys:
+                totalPrice += priceOfFood[keys]
+
+    page5_entry_1.insert(0, f"{totalPrice}$")
+    page5_entry_1.config(state='readonly')  # Make state readonly to make sure user cant edit total price after it has been displayed
+
+    
+
 mainWindow.mainloop()
