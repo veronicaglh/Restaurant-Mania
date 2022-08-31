@@ -385,4 +385,28 @@ def calculate():
                 final_text_box.configure(state='disabled')
 
 
+        # Scenario 3: if an individual can pay for more people other than themselves but there is remainder
+        elif list_payments[i] > individualPay and list_payments[i] < totalPrice and list_payments[i] % individualPay != 0:
+            remainder = list_payments[i] / individualPay
+            # math.floor(remainder) will return the greatest integer that is smaller than the value of remainder
+            # for eg: if remainder value is 2.5 math.floor(remainder) will return 2
+
+            # Only will execute if math.floor(remainder) >=2 this is so that only the one who can pay for another person is considered
+            if math.floor(remainder) >= 2:
+                # To make it grammatically correct depending on the value of math.floor(remainder)
+                if math.floor(remainder) == 2:
+                    bestMethod4 = f"{people_that_ate[i]} can pay for {math.floor(remainder) - 1} more extra person. Let {people_that_ate[i]} pay for one more person and let that person pay {people_that_ate[i]} back another time"
+                    final_text_box.insert('end', bestMethod4)
+                    final_text_box.configure(state='disabled')
+
+                else:
+                    bestMethod5 = f" {people_that_ate[i]} can pay for {math.floor(remainder) - 1 } more extra people.Let {people_that_ate[i]} pay for {math.floor(remainder) - 1} more people and let them pay {people_that_ate[i]} back another time"
+                    final_text_box.insert('end', bestMethod5)
+                    final_text_box.configure(state='disabled')
+
+    # After executing the calculate function the program will call show_frame function with argument of page5
+    # This is so that page5 can be shown
+    # and the results from the calculate function can be displayed on the 5th page(page5) of the UI
+    show_frame(page5)
+
 mainWindow.mainloop()
