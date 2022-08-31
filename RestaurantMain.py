@@ -360,5 +360,15 @@ def calculate():
             display_change_textbox.insert('end', f"{people_that_ate[j]} still has to pay {remaining}$.\n")
             display_change_textbox.configure(state='disabled')
 
+    # To find the best algorithm for payment
+    for i in range(len(list_payments)):
+        # Scenario 1: if an individual has money to pay for the whole thing #
+        if list_payments[i] > totalPrice:
+            bestMethod1 = f"{people_that_ate[i]} should pay and the rest of the members can pay {people_that_ate[i]} later."
+            final_text_box.insert('end', bestMethod1)
+            final_text_box.configure(state='disabled')  # disable state so user can edit the best method after it has been displayed
+
+
+
 
 mainWindow.mainloop()
