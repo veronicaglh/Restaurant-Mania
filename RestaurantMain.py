@@ -42,7 +42,7 @@ show_frame(page1)
 
 # Let us start building the tkinter UI with each page
 
-# ========= Page 1 =========
+# ============= Page 1 ================
 
 # Declaring the widgets of Page 1
 page1.config(background='#925D33')
@@ -85,6 +85,49 @@ page1_menu_button.place(x=425, y=460)
 page1_calculate_button.place(x=530, y=460)
 # ========== End of Page 1 =============
 
+
+# ============= Page 2 =================
+
+# Declaring the widgets of Page 2
+page2.config(background='#925D33')
+img = Label(page2, image=render)
+img.place(x=0, y=0)
+
+
+page2_label_1 = Label(page2, text='Menu', bg='#925D33',fg='white', font=('Calibri', 30, 'bold'))
+
+# Adding Menu Items on menu canvas
+menu_canvas = Canvas(page2, bg='#d19480', width=280, height=200, bd=1)
+menu_item_1 = Label(page2, text="Shiro ................................... 40$", bg="#d19480", fg="white", font="Calibri 13 italic")
+menu_item_2 = Label(page2, text="Firfir .................................. 40$", bg="#d19480", fg="white", font="Calibri 13 italic")
+menu_item_3 = Label(page2, text="Mesir ................................... 40$", bg="#d19480", fg="white", font="Calibri 13 italic")
+menu_item_4 = Label(page2, text="Beyeaynet ............................... 45$", bg="#d19480", fg="white", font="Calibri 13 italic")
+menu_item_5 = Label(page2, text="Tasty Soya............................... 40$", bg="#d19480", fg="white", font="Calibri 13 italic")
+menu_item_6 = Label(page2, text="Tibs .................................... 60$", bg="#d19480", fg="white", font="Calibri 13 italic")
+menu_item_7 = Label(page2, text="Pasta ................................... 40$", bg="#d19480", fg="white", font="Calibri 13 italic")
+menu_item_8 = Label(page2, text="Tea ...................................... 7$", bg="#d19480", fg="white", font="Calibri 13 italic")
+menu_item_9 = Label(page2, text="Buna ..................................... 10$", bg="#d19480", fg="white", font="Calibri 13 italic")
+
+
+page2_edit_menu_button = Button(page2, text='Edit Menu', fg='#925D33', font=('Calibri', 13, 'bold'), command=lambda: show_frame(page3))
+page2_calculate_button = Button(page2, text='Calculate', fg='#925D33', font=('Calibri', 13, 'bold'), command=lambda: show_frame(page4))
+page2_calculate_button. config(width=10)
+
+# Placing the widgets on to the page2 frame
+page2_label_1.place(x=450, y=120)
+menu_canvas.place(x=450, y=180)
+menu_item_1.place(x=455, y=190)
+menu_item_2.place(x=455, y=210)
+menu_item_3.place(x=455, y=230)
+menu_item_4.place(x=455, y=250)
+menu_item_5.place(x=455, y=270)
+menu_item_6.place(x=455, y=290)
+menu_item_7.place(x=455, y=310)
+menu_item_8.place(x=455, y=330)
+menu_item_9.place(x=455, y=350)
+page2_edit_menu_button.place(x=450, y=400)
+page2_calculate_button.place(x=550, y=400)
+# ========== End of Page 2 =============
 
 
 
