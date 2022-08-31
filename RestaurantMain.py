@@ -368,7 +368,21 @@ def calculate():
             final_text_box.insert('end', bestMethod1)
             final_text_box.configure(state='disabled')  # disable state so user can edit the best method after it has been displayed
 
-
+        # Scenario 2: if an individual can pay for more people other than themselves but not everybody #
+        elif list_payments[i] > individualPay and list_payments[i] < totalPrice and list_payments[i] % individualPay == 0:
+            # Person will show how many other people that individual can pay for.
+            # For eg. If person = 2 they can pay for 2 more people etc..
+            # We subtract 1 from person because that individual also has to pay for themselves
+            person = list_payments[i] / individualPay - 1
+            # To make it grammatically correct depending on the value of person
+            if person == 1:
+                bestMethod2 = f"{people_that_ate[i]} can pay for one more person. Let {people_that_ate[i]} pay for one more person and let that person pay {people_that_ate[i]} back another time"
+                final_text_box.insert('end', bestMethod2)
+                final_text_box.configure(state='disabled')
+            else:
+                bestMethod3 = f"{people_that_ate[i]} can pay for {person}  more people.Let {people_that_ate[i]} pay for {person} more people and let them pay {people_that_ate[i]} back another time"
+                final_text_box.insert('end', bestMethod3)
+                final_text_box.configure(state='disabled')
 
 
 mainWindow.mainloop()
