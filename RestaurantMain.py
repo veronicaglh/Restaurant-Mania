@@ -335,7 +335,7 @@ def calculate():
     popup()
 
     totalPrice = 0
-    ## To find the total price of what they ate that day:
+    # To find the total price of what they ate that day:
     for i in food_eaten:
         for keys in priceOfFood:
             if i == keys:
@@ -348,6 +348,17 @@ def calculate():
     page5_entry_2.insert(0, f"{individualPay}$")
     page5_entry_2.config(state='readonly')  # Make state readonly to make sure user cant edit the individual payment after it has been displayed
 
+    # To find the change each person has:
+    for j in range(len(list_payments)):
+        if list_payments[j] > individualPay:
+            change = list_payments[j] - individualPay
+            display_change_textbox.insert('end', f"{people_that_ate[j]} has a change of {change}$.\n")
+            display_change_textbox.configure(state='disabled')
+
+        elif list_payments[j] < individualPay:
+            remaining = individualPay - list_payments[j]
+            display_change_textbox.insert('end', f"{people_that_ate[j]} still has to pay {remaining}$.\n")
+            display_change_textbox.configure(state='disabled')
 
 
 mainWindow.mainloop()
