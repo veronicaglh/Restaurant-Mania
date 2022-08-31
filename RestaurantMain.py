@@ -46,7 +46,7 @@ show_frame(page1)
 
 # Declaring the widgets of Page 1
 page1.config(background='#925D33')
-load = Image.open('Images\\Page1Img3.jpg')
+load = Image.open('Images\\backgroundImage.jpg')
 render = ImageTk.PhotoImage(load)
 img = Label(page1, image=render)
 img.place(x=0, y=0)
@@ -84,4 +84,11 @@ page1_label_11.place(x=425, y=420)
 page1_menu_button.place(x=425, y=460)
 page1_calculate_button.place(x=530, y=460)
 # ========== End of Page 1 =============
+
+
+
+
+
+
+
 mainWindow.mainloop()
