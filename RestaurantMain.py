@@ -308,14 +308,16 @@ def calculate():
 
     number_of_people = len(people_that_ate)
 
-    # For error handling
+    # Add inner function named popup for error handling
     def popup():
+        # Incase user inputs an item that is not in menu this loop will iterate through food_eaten list
+        # and check if the elements are in priceOfFood(which is the dictionary which contains the name of the meals as well as their price)
+        # if the user input is not in priceOfFood warning message will be shown to tell the user to edit and add the new meal to menu before calculation
         for i in range(len(food_eaten)):
             if food_eaten[i] in priceOfFood:
                 continue
             else:
-                messagebox.showwarning("Warning Message",
-                                       "You have entered an item that is not in the menu. Please re run and edit the menu before continuing.")
+                messagebox.showwarning("Warning Message", "You have entered an item that is not in the menu. Please re run and edit the menu before continuing.")
                 break
 
         if number_of_people < len(list_payments):
@@ -342,6 +344,10 @@ def calculate():
     page5_entry_1.insert(0, f"{totalPrice}$")
     page5_entry_1.config(state='readonly')  # Make state readonly to make sure user cant edit total price after it has been displayed
 
-    
+    individualPay = totalPrice / number_of_people
+    page5_entry_2.insert(0, f"{individualPay}$")
+    page5_entry_2.config(state='readonly')  # Make state readonly to make sure user cant edit the individual payment after it has been displayed
+
+
 
 mainWindow.mainloop()
