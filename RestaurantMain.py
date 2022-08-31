@@ -222,6 +222,47 @@ page4_entry_3.place(x=450, y=442)
 # ========== End of Page 4 =============
 
 
+# ============= Page 5 =================
+
+# Declaring the widgets of Page 5
+page5.config(background='#925D33')
+img = Label(page5, image=render)
+img.place(x=0, y=0)
+
+page5_label_1 = Label(page5, text='Results', bg='#925D33',fg='white', font=('Calibri', 30, 'bold'))
+
+# To display the total price
+page5_label_2 = Label(page5, text='The total price is: ', bg='#925D33',fg='white', font=('Calibri', 13, 'normal'))
+page5_entry_1 = Entry(page5, highlightthickness=2)
+page5_entry_1. config(width=25, highlightcolor='#DF7861')
+
+# To display how much each individual has to pay:
+page5_label_3 = Label(page5, text='You each have to pay:', bg='#925D33',fg='white', font=('Calibri', 13, 'normal'))
+page5_entry_2 = Entry(page5, highlightthickness=2)
+page5_entry_2. config(width=22, highlightcolor='#DF7861')
+
+# To display the change
+page5_label_4 = Label(page5, text='Change:', bg='#925D33',fg='white', font=('Calibri', 13, 'normal'))
+display_change_textbox = Text(page5, height=3, width=25, wrap=WORD, highlightthickness=2)
+display_change_textbox.config(highlightcolor='#DF7861')
+
+# To display the best possible method of payment
+page5_label_5 = Label(page5, text='Best method:', bg='#925D33',fg='white', font=('Calibri', 13, 'normal'))
+final_text_box = Text(page5, height=10, width=35, wrap=WORD, highlightthickness=2)
+final_text_box.config(highlightcolor='#DF7861')
+
+# Placing the widgets on to the page5 frame
+page5_label_1.place(x=500, y=100)
+page5_label_2.place(x=450, y=170)
+page5_entry_1.place(x=585, y=170)
+page5_label_3.place(x=450, y=210)
+page5_entry_2.place(x=610, y=210)
+page5_label_4.place(x=450, y=250)
+display_change_textbox.place(x=530, y=250)
+page5_label_5.place(x=450, y=305)
+final_text_box.place(x=450, y=340)
+# ========== End of Page 5 =============
+
 
 
 mainWindow.mainloop()
