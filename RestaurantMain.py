@@ -264,5 +264,18 @@ final_text_box.place(x=450, y=340)
 # ========== End of Page 5 =============
 
 
+# PART II - COMPUTATION
+priceOfFood = {'shiro': 40, 'firfir': 40, 'beyeaynet': 45, 'mesir': 40, 'tastys': 40, 'pasta': 40, 'macornoni': 40,
+               'tea': 7, 'buna': 10}
+
+
+# Function that will be called when user wants to add an item to menu
+def add_item_to_menu():
+            newFood = add_item_name_entry.get()
+            priceOfNewFood = int(add_item_price_entry.get())
+            priceOfFood[newFood] = priceOfNewFood
+            messagebox.showinfo("Successful", "You have successfully added a new item to the menu. Press continue to calculate")
+
+
 
 mainWindow.mainloop()
