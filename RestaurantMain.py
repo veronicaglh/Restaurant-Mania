@@ -6,6 +6,7 @@
 # To build the UI with tkinter you will need to run the following command on the terminal of your IDE
 # pip install pillow
 
+# Import Statements 
 import math
 from tkinter import *
 from tkinter import messagebox
